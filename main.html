@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <title>PixelVenture Wiki | Main page</title>
 </head>
+
+<header>
+
+</header>
+
 <body>
-    <h1>Hallo</h1>
+    <h1>PixelVenture Wiki</h1>
+    <adinfo>A wiki for the game PixelVenture.</adinfo>
+    
+
+
+    <div id="hamburger-menu">
+        <!-- Hamburger icon to open the side navigation -->
+        <span id="hamburger-icon">&#9776;</span>
+        <nav id="side-nav" class="side-nav" style="position: relative;">
+            <div>
+                <a href="#">Home</a>
+                <a href="#">Guides</a>
+                <a href="#">Items</a>
+                <a href="#">Monsters</a>
+            </div>
+        </nav>
+    </div>
+    <script>
+    // Get references to DOM elements
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const sideNav = document.getElementById('side-nav');
+
+    // Toggle side navigation when hamburger icon is clicked
+    hamburgerIcon.onclick = function() {
+        sideNav.classList.toggle('open');
+    };
+
+    // Optional: Close menu when clicking outside the navigation
+    window.onclick = function(event) {
+        if (
+            sideNav.classList.contains('open') &&
+            !sideNav.contains(event.target) &&
+            event.target !== hamburgerIcon
+        ) {
+            sideNav.classList.remove('open');
+        }
+    };
+    </script>
+    <txt>Welcome to PixelVenture Wiki.</txt>
+
+
 </body>
+
+<footer>
+    
+
+    <middle><p>&copy; 2025 Your Website. All rights reserved.</p></middle>
+</footer>
+
 </html>
